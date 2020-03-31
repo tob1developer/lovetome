@@ -1,26 +1,14 @@
 fun main(){
-    data class person(var name:String, var age:Int, var phone : String)
-    class NguoiIu(private var name: String, private var age: Int, private var phone: String)
-    val Kiet: person = person("Ngo Tuan Kiet",20,"0336391269")
-        //get
-    println(Kiet.name)
-    println(Kiet.age)
-    println(Kiet.phone)
-    println(Kiet)
-    println(Kiet.component1())
-    println(Kiet.component2())
-    println(Kiet.component3())
-
-        //set
-    Kiet.name = "Love you du du du"
-    println(Kiet.name)
-
-        //private
-    var banNaoDo: NguoiIu = NguoiIu(":v lam gi co",20,"nope")
-    println(banNaoDo)
-
-        //copy
-    val betterKiet = Kiet.copy(name = "love you so much")
-    println(betterKiet.name)
-        //
+    var Huong = SinhVien("Huong",1)
+    var Kiet = SinhVien("Kiet",2)
+    var CTDL = Sach("CTDLGT","CNTT",111,2)
+    var TKT = Sach("Toan Ki thuat","Toan chuyen nghanh",123,1)
+    TKT.muonSach(Huong)
+    Huong.addSachMuon(TKT)
+    CTDL.muonSach(Huong)
+    Huong.addSachMuon(CTDL)
+    Huong.getListSach()
+    println(Huong.getSL())
 }
+
+
